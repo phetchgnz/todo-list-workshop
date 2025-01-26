@@ -19,11 +19,52 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 3px 3px 10x #b2b2b2;
+    
+    .input-groups {
+        background: #dedede;
+        border-radius: 15px;
+        margin: 10px 0;
+        
+        input[type=text] { 
+            background: transparent;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+
+        #addBtn {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        #addBtn:hover {
+            background: darkgreen;
+        }
+    }
 }
 
 #taskList {
+    background: #f0f0f0;
+    border-radius: 5px;
+    list-style: none;
+    
+    li { 
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+        /* border: 1px solid red; */
+    }
+    
     #deleteBtn {
         color: white;
+        border-radius: 5px;
         background: red;
         cursor: pointer;
         border: none;
