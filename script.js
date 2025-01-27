@@ -12,14 +12,24 @@ function AddTask() {
     console.log("Task added")
 
     let listItem = document.createElement("li")
-    listItem.textConten = taskText;
+    listItem.textContent = taskText;
 
-    let deleteBtn = docu.createElement("button")
-    deleteBtn.textConten = "Delete"
+    let deleteBtn = document.createElement("button")
+    deleteBtn.textContent = "Delete"
     deleteBtn.id = "deleteBtn"
-    deleteBtn.onClick = () => {
+    deleteBtn.onclick = () => {
         taskList.removeChild(listItem);
     }
+
+    listItem.appendChild(deleteBtn);
+    taskList.appendChild(listItem);
+
+    taskInput.value = ""
 }
 
+taskInput.addEventListener("keypress", (e)=> {
+    if (e.key === "Enter") {
+        AddTask();
+    }
+})
 addBtn.addEventListener("click", AddTask)
